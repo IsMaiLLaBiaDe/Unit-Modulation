@@ -21,6 +21,7 @@ if (isset($_SESSION["user_id"])) {
 <head>
 <meta charset="UTF-8">
 <link href="w3.css" rel="stylesheet">
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
@@ -231,8 +232,9 @@ if ($result->num_rows > 0) {
       <div class="w3-container">
         <div class="w3-display-container">
         <img style="width:200px;height:200px" src="<?=$row['ppthimg'];?>">
-        <p><a href="<?=$row['lproduct'];?>" ><?=$row['product'];?><br></a><b><?=$row['price'];?></b> </p>
-      </div>
+        <p><a href="p/<?=$row['lproduct'];?>.php?id=<?=$row['id'];?> " ><?=$row['product'];?><br></a><b><?=$row['price'];?></b> </p>
+
+  </div>
    </div>
     </div>
 

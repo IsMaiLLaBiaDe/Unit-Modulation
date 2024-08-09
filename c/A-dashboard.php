@@ -65,6 +65,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Views</a>
     <a href="c-product.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Creat Post </a>
     <a href="c-page.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  Creat Page</a>
+	<a href="u-slide.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  Slide </a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
     <a href="history.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
     <a href="Settings.php" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>

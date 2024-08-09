@@ -13,19 +13,25 @@ if (isset($_SESSION["user_id"])) {
     
     $user = $result->fetch_assoc();
 }
+ 	
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title class="w3-left">Unit-modulation</title>
   <style>
+
+    a {
+  background-color: transparent;
+  text-decoration: none !important;
+}
 	html body {
 	padding: 0px;
 	margin: 0px;
@@ -53,7 +59,8 @@ if (isset($_SESSION["user_id"])) {
 	 justify-content:center;
 	  opacity:100%;
 
-    }
+    }  
+	  
 	.w3-sidebar a {font-family: "Roboto", sans-serif}
 	body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
   </style>
@@ -142,7 +149,7 @@ if (isset($_SESSION['user_id'])) {
   <header class="w3-container w3-xlarge">
     <center><p class="w3-left"><a>Unit-modulation</a></p></center>
     <p class="w3-right">
-	   	 <a href="searchs.php"><i class=" w3-margin-right fa fa-search"></i></a>
+	   	 <a href="search.php"><i class=" w3-margin-right fa fa-search"></i></a>
        <!--<a href="cart.php"><i class="fa fa-shopping-cart w3-margin-right"></i></a>
 	   <a href="favored.php"> <i class="fa fa-heart w3-margin-right" ></i></a>-->
 	   <a href="login.php" ><i class=" fa fa-sign-in"></i></a>
@@ -183,8 +190,8 @@ $result = $conn->query($sql);
     <div class="w3-display-topleft w3-text-black" style="padding:24px 48px">
       <h1 class="w3-jumbo w3-hide-small">New arrivals</h1>
       <h1 class="w3-hide-large w3-hide-medium">New arrivals</h1>
-      <h1 class="w3-hide-small">COLLECTION 2016</h1>
-      <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
+      <h1 class="w3-hide-small">COLLECTION <?= date("Y"); ?> </h1>
+      <p><a href="search.php" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
     </div>
 </div>
 
@@ -209,7 +216,7 @@ if ($result->num_rows > 0) {
       <div class="w3-container">
         <div class="w3-display-container">
         <img style="width:200px;height:200px" src="<?=$row['ppthimg'];?>">
-        <p><a href="p/<?=$row['lproduct'];?>.php" ><?=$row['product'];?><a style="display:none;"><?=$row['id'];?></a><br></a><b><?=$row['price'];?></b> </p>
+        <p><a href="p/<?=$row['lproduct'];?>.php?id=<?=$row['id'];?>" ><?=$row['product'];?><a style="display:none;"><?=$row['id'];?></a><br></a><a href="p/<?=$row['lproduct'];?>.php?id=<?=$row['id'];?>" ><?=$row['price'];?><br>See More</a> </p>
       </div>
    </div>
     </div>
@@ -259,12 +266,12 @@ if ($result->num_rows > 0) {
         <p><i class="fa fa-fw fa-cc-amex"></i> <?=$row['companyname'];?></p>
         <p><i class="fa fa-fw fa-credit-card"></i><?=$row['companyname'];?></p>
         <br>
-        <a href="https://www.google.com/<?=$row['fb'];?>/" class="fa fa-facebook-official w3-hover-opacity w3-large"></a>
-        <a href="https://www.google.com/<?=$row['ig'];?>/"  class="fa fa-instagram w3-hover-opacity w3-large"></a>
-        <a href="https://www.google.com/<?=$row['sp'];?>/"  class="fa fa-snapchat w3-hover-opacity w3-large"></a>
-        <a href="https://www.google.com/<?=$row['pt'];?>/"  class="fa fa-pinterest-p w3-hover-opacity w3-large"></a>
-        <a href="https://www.google.com/<?=$row['tw'];?>/"  class="fa fa-twitter w3-hover-opacity w3-large"></a>
-        <a href="https://www.google.com/<?=$row['ld'];?>/"  class="fa fa-linkedin w3-hover-opacity w3-large"></a>
+        <a href="<?=$row['fb'];?>/" class="fa fa-facebook-official w3-hover-opacity w3-large"></a>
+        <a href="<?=$row['ig'];?>/"  class="fa fa-instagram w3-hover-opacity w3-large"></a>
+        <a href="<?=$row['sp'];?>/"  class="fa fa-snapchat w3-hover-opacity w3-large"></a>
+        <a href="<?=$row['pt'];?>/"  class="fa fa-pinterest-p w3-hover-opacity w3-large"></a>
+        <a href="<?=$row['tw'];?>/"  class="fa fa-twitter w3-hover-opacity w3-large"></a>
+        <a href="<?=$row['ld'];?>/"  class="fa fa-linkedin w3-hover-opacity w3-large"></a>
 		<?php
     }
 } else {
