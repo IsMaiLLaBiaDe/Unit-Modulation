@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 07, 2024 at 09:54 PM
+-- Generation Time: Nov 02, 2024 at 05:23 PM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.26
 
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `cd` (
 --
 
 INSERT INTO `cd` (`id`, `companyname`, `phone`, `email`, `fb`, `sp`, `ig`, `pt`, `tw`, `ld`, `time`) VALUES
-(1, 'Um', '+21261111111111', 'mail@um.com', 'f', 'f', 'f', 'f', 'f', 'f', '2023-12-10 09:28:02');
+(1, 'Um', '+21264905848', 'i4Lx8D@gmail.com', 'https://www.facebook.com/profile.php?id=61555042454154', 'https://www.facebook.com/profile.php?id=61555042454154', 'https://www.facebook.com/profile.php?id=61555042454154', 'https://www.facebook.com/profile.php?id=61555042454154', 'https://x.com/ismaillabiade', 'https://www.linkedin.com/in/ismaillabiade/', '2023-12-10 09:28:02');
 
 -- --------------------------------------------------------
 
@@ -99,6 +99,36 @@ INSERT INTO `page` (`id`, `page`, `description`, `time`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `preq`
+--
+
+DROP TABLE IF EXISTS `preq`;
+CREATE TABLE IF NOT EXISTS `preq` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `q` int NOT NULL,
+  `fn` varchar(25) NOT NULL,
+  `ln` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `adresse` varchar(25) NOT NULL,
+  `np` varchar(14) NOT NULL,
+  `time` timestamp NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `preq`
+--
+
+INSERT INTO `preq` (`id`, `q`, `fn`, `ln`, `email`, `adresse`, `np`, `time`) VALUES
+(1, 1, 'IsMail', 'Labiade', '', '', '', '0000-00-00 00:00:00'),
+(2, 1, 'IsMail', 'Labiade', '', '', '', '0000-00-00 00:00:00'),
+(3, 1, 'IsMail', 'Labiade', 'ismaillabiade@gmail.com', '', '', '0000-00-00 00:00:00'),
+(4, 1, 'IsMail', 'Labiade', 'ismaillabiade@gmail.com', 'qpskflmdkngjf', 'azdsfgh', '0000-00-00 00:00:00'),
+(5, 1, 'IsMail', 'Labiade', 'i@i.com', 'Route', '061111111', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `products`
 --
 
@@ -108,7 +138,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `price` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `quantity` int NOT NULL,
   `product` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `description` varchar(255) NOT NULL,
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `keyword` varchar(255) NOT NULL,
   `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `status` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
@@ -118,17 +148,17 @@ CREATE TABLE IF NOT EXISTS `products` (
   `item` varchar(240) NOT NULL,
   `time` varchar(240) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1000028 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=1000031 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`id`, `price`, `quantity`, `product`, `description`, `keyword`, `title`, `status`, `ppthimg`, `lproduct`, `p-status`, `item`, `time`) VALUES
-(1, '3000MAD', 2, 'phone', 'specy', 'android', 'Xiaomi', '', 'Assets/f.jpg', 'Xiaomi', '', 'phone', '0'),
-(2, '100MAD', 20, 'Headphones', 'New', 'Music', 'Headphones', '', 'Assets/f.jpg', 'Headphones', '', '1', '0'),
-(3, '2000MAD', 20, 'Computer', 'Laptop', 'Laptop', 'Computer', '', 'Assets/f.jpg', 'Lenovo', '', '2', '0'),
-(4, '2000MAD', 20, 'Mouse', 'Last', 'Mouse', 'Mouse', '', 'Assets/f.jpg', 'Mouse', '', '3', '0');
+(4, '4290MAD', 2, 'Xiaomi Pad 6 ', '<div class=\"specification--wrap--lxVQ2tj\" id=\"nav-specification\" data-pl=\"product-specs\"><div class=\"title--wrap--NWOaiSp\" data-spm-anchor-id=\"a2g0o.detail.0.i12.36f5vwrLvwrLGB\"><div class=\"title--text--Otu0bLr\"><h2 class=\"title--title--O6xcB1q\" data-spm-anchor-id=\"a2g0o.detail.0.i16.36f5vwrLvwrLGB\">Specifications</h2></div></div><ul class=\"specification--list--GZuXzRX\"><li class=\"specification--line--IXeRJI7\"><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Second Webcam Pixels</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"8MP\" data-spm-anchor-id=\"a2g0o.detail.0.i14.36f5vwrLvwrLGB\"><span>8MP</span></div></div><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Front Webcam Pixels</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"8MP\"><span>8MP</span></div></div></li><li class=\"specification--line--IXeRJI7\"><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Camera</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"Second Webcam,Front Webcam Pixels\"><span>Second Webcam,Front Webcam Pixels</span></div></div><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Net Weight</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"400-500g\"><span>400-500g</span></div></div></li><li class=\"specification--line--IXeRJI7\"><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Package</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"Yes\"><span>Yes</span></div></div><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Cell Capacity</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"8840mAh\"><span>8840mAh</span></div></div></li><li class=\"specification--line--IXeRJI7\"><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Extend Port</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"3G External\"><span>3G External</span></div></div><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Tablet Storage Capacity</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"1TGB\"><span>1TGB</span></div></div></li><li class=\"specification--line--IXeRJI7\"><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Operating System</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"Android 13\"><span>Android 13</span></div></div><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Display Size</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"11&quot;\"><span>11\"</span></div></div></li><li class=\"specification--line--IXeRJI7\"><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Feature</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"ULTRA SLIM,Dual Cameras\"><span>ULTRA SLIM,Dual Cameras</span></div></div><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Memory Capacity</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"≤ 128MB\"><span>≤ 128MB</span></div></div></li><li class=\"specification--line--IXeRJI7\"><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Processor Model</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"Snapdragon\"><span>Snapdragon</span></div></div><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Display resolution</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"2880*1800\"><span>2880*1800</span></div></div></li><li class=\"specification--line--IXeRJI7\"><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Network </span></div><div class=\"specification--desc--Dxx6W0W\" title=\"WIFI\"><span>WIFI</span></div></div><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Supporting Language</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"English,Russian,Spanish,SWEDISH,german,Chinese,FRENCH\"><span>English,Russian,Spanish,SWEDISH,german,Chinese,FRENCH</span></div></div></li><li class=\"specification--line--IXeRJI7\"><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Brand Name</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"XIAOMI\"><span>XIAOMI</span></div></div><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Item Type</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"Tablet PC\"><span>Tablet PC</span></div></div></li><li class=\"specification--line--IXeRJI7\"><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\" data-spm-anchor-id=\"a2g0o.detail.0.i15.36f5vwrLvwrLGB\"><span>Xiaomi Model</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"Xiaomi Mi Pad 6\"><span>Xiaomi Mi Pad 6</span></div></div><div class=\"specification--prop--Jh28bKu\"><div class=\"specification--title--SfH3sA8\"><span>Origin</span></div><div class=\"specification--desc--Dxx6W0W\" title=\"Mainland China\"><span>Mainland China</span></div></div></li></ul></div>', 'Xiaomi Pad 6 ', 'Xiaomi Pad 6 ', '', 'https://ae-pic-a1.aliexpress-media.com/kf/Sf11343938e9b4556a0602bd860a33ef6T/Xiaomi-Pad-6-WiFi-Version-11-Inches-144Hz-8840mAh-Bluetooth-5-2-Four-Speakers-Dolby-Atmos.jpg_.webp', 'Xiaomi Pad 6', '', 'ipad', '0'),
+(3, '6000MAD', 20, 'Apple iPad Pro', '<div class=\"row -pas\"><article class=\"col8 -pvs\"><div class=\"card-b -fh\"><h2 class=\"hdr -upp -fs14 -m -pam\">Principales caractéristiques</h2><div class=\"markup -pam\"><ul><li>Écran Liquid Retina 12.9\" Multi-Touch IPS&nbsp;(2732 x 2048)</li><li>Technologie et affichage True Tone&nbsp;</li><li>Puce A12X Bionic avec Neural Engine</li><li>Coprocesseur M12 intégré</li><li>256 Go de Stockage&nbsp;</li><li>Photo 12 Mpx &amp; enregistrement vidéo 4K</li><li>Quatre haut-parleurs intégrés&nbsp;</li><li>4 Go RAM</li><li>Authentification sécurisée :&nbsp;Face ID</li><li>Payez avec votre iPad dans les apps comme sur le Web</li><li>Wi-Fi (802.11a/b/g/n/ac), bi-bande simultané (2,4 GHz et 5 GHz)</li><li>Technologie Bluetooth 5.0</li><li>Connecteur USB-C&nbsp;/ Smart Connector&nbsp;</li><li>Jusqu’à 10 heures d’autonomie pour naviguer sur le Web en Wi-Fi</li><li>Compatible avec l\'Apple Pencil (2e Gen) &amp; Smart Keyboard Folio (vendus séparément)</li><li>Poids :&nbsp;468 g</li><li>Remis à Neuf</li><li>6 Mois de la Garantie</li></ul></div></div></article><article class=\"col8 -pvs\"><div class=\"card-b -fh\"><h2 class=\"hdr -upp -fs14 -m -pam\">Vendu avec le produit</h2><div class=\"markup -pam\">1x iPad Pro<br><br>1x Chargeur Complet</div></div></article><article class=\"col8 -pvs\"><div class=\"card-b -fh\"><h2 class=\"hdr -upp -fs14 -m -pam\">Descriptif technique</h2><ul class=\"-pvs -mvxs -phm -lsn\"><li class=\"-pvxs\"><span class=\"-b\">SKU</span>: AP009MP0PUJ3ENAFAMZ</li><li class=\"-pvxs\"><span class=\"-b\">Modèle</span>: iPad Pro (2018)</li><li class=\"-pvxs\"><span class=\"-b\">Pays de production</span>: European Union</li><li class=\"-pvxs\"><span class=\"-b\">Poids (kg)</span>: 0.162</li><li class=\"-pvxs\"><span class=\"-b\">Couleur</span>: Gris</li><li class=\"-pvxs\"><span class=\"-b\">Matière principale</span>: Aluminium</li></ul></div></article></div>', 'Apple iPad Pro', 'Apple iPad Pro', '', 'https://ma.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/43/414826/2.jpg?8005', 'Apple iPad Pro', '', 'ipad', '0'),
+(2, '50MAD', 20, 'Mouse', '<div><center>\n<pre>\nColor: Gold-Silver-black\n\nSpecifications\n\n    Time to market\n    Dec-04\n    Gross Weight\n    71\n    Operation Mode\n    Opto-electronic\n    Power Type\n    RECHARGEABLE\n    Number of Buttons\n    3\n    Number of Rollers\n    1 pcs\n    Hand Orientation\n    Right\n    Package\n    Yes\n    DPI\n    1200\n    Interface Type\n    USB\n    Type\n    Bluetooth Wireless\n    Brand Name\n    ITLY\n    Origin\n    Mainland China\n    Certification\n    none\n\nDescription\nReport Item\n\n• Rechargeable :No need to constantly replace batteries, simply recharge the mouse for extended use.\n\n\n• Bluetooth Wireless :Connect to your device without the hassle of cords and wires, providing a clutter-free workspace.\n\n\n• Luminous :The mouse features a bright blue light that makes it easy to locate in low-light conditions.\n\n\n• Portable :Take your mouse on-the-go with you, perfect for travel or working remotely.\n\n\nProduct Parameters:\n\nWorking mode: 2.4G+BT5.2/BT3.0\n\n（BT3.0Mouse+BT5.2 Mouse Two Bluetooth signals are optional\n\nBT3.0Mouse for laptop more stable/\nBT5.2 Mouse is more stable for tablets）\n\nDPI：800-1200-1600DPI\n\nProduct size: 112*58*25MM\n\nNumber of switches: 4 Keys (mute design)\n\nSwitch life: 10 million times\n\nProduct material: ABS\n\nVoltage/current: 5V/500mA\n\nBattery capacity: 500mAH\n\nWorking range: 10m\n\nLength of charging line: 20cm\n\nProduct weight: About 69g\n</pre>\n</div>', 'Mouse', 'Mouse', '', 'Assets/mouse.png', 'Mouse', '', 'Mouse', '0'),
+(1, '60MAD', 20, 'Screwdriver', '<pre>-FENTE \n-PHILIPS\n-POZIDRIV\n-HEX\n-TROX\n-RALLONGE \n-MANCHE DE PRESCISION</pre>', 'Screwdriver', 'Screwdriver', '', 'Assets/4.webp', 'Screwdriver', '', 'Screwdriver', '0');
 
 -- --------------------------------------------------------
 
@@ -143,6 +173,7 @@ CREATE TABLE IF NOT EXISTS `slide` (
   `alt` varchar(255) NOT NULL,
   `EventnSlide` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `title` varchar(255) NOT NULL,
+  `stitle` varchar(254) NOT NULL,
   `time` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -151,10 +182,10 @@ CREATE TABLE IF NOT EXISTS `slide` (
 -- Dumping data for table `slide`
 --
 
-INSERT INTO `slide` (`id`, `link`, `alt`, `EventnSlide`, `title`, `time`) VALUES
-(1, '1\r\n', '2', 'https://images.pexels.com/photos/7527862/pexels-photo-7527862.jpeg?auto=compress&cs=tinysrgb&w=1600', 'dsfjdk', '2023-12-04 19:24:49'),
-(2, 'SDQFSFGVPBN', 'KFD?GHLJ', 'https://www.w3schools.com/w3css/img_snowtops.jpg', 'SDINFGKFH', '2023-12-04 19:27:01'),
-(3, '1\r\n', '2', 'https://www.w3schools.com/w3css/img_lights.jpg', 'dsfjdk', '2023-12-04 19:28:09');
+INSERT INTO `slide` (`id`, `link`, `alt`, `EventnSlide`, `title`, `stitle`, `time`) VALUES
+(1, 'apple', 'apple', 'assets/slide/ipad.png', 'apple', 'apple', '2024-08-07 21:44:55'),
+(2, 'xiaomi', 'xiaomi', 'assets/slide/xiaomi.jpg', 'xiaomi', 'xiaomi', '2024-08-07 21:44:48'),
+(3, 'xiaomi', 'xiaomi', 'assets/slide/xiaomi1.jpg', 'xiaomi', 'xiaomi', '2024-08-07 21:44:51');
 
 -- --------------------------------------------------------
 
