@@ -290,21 +290,21 @@ if ($result->num_rows > 0)
   background-position: center;
   background-size: cover;
 background-image:url('../assets/slide/ipad.png'); background-color:gray;" class="flex-container">
-  <div><center><form style="height:50%;width:50%;font-size: 50%;color:white;" method="post" action="functions/preq.php"  >
-  <p style="text-align:left;" >	
- </p>
-<label>quantity</label>
-<input type="number" min="1" name="quantity" ></input>
-<label>Full Name</label>
-<input name="fname" required></input>
-<label>Adresse</label>
-<input type="text" name="adresse" required></input>
-<label>Email</label>
-<input type="text" name="email" required></input>
-<label>Phone Number</label>
-<input type="text" name="phnumber" required ></input>
-<br> 
-<button style="margin:30px;border-radius:20%;" type="submit">Shop</button></form></div></center></center>
+  <div><center><form  style="height:50%;width:50%;font-size: 50%;color:white;" action="../functions/preq.php" method="post">
+    <label for="quantity">Quantity:</label>
+    <input type="number" min="1" id="q" name="q"><br><br>
+    <label for="FirstName">First Name:</label>
+    <input type="text" id="fn" name="fn"><br><br>
+    <label for="LastName">Last Name:</label>
+	<input type="text" id="ln" name="ln"><br><br>
+	<label for="email">email</label>
+	<input type="email" id="email" name="email"><br><br>
+<label for="adresse">Adresse</label>
+	<input type="text" id="adresse" name="adresse"><br><br>
+	<label for="NumberPhone">Phone</label>
+	<input type="text" id="np" name="np"><br><br>
+    <input type="submit" value="Submit">
+</form>   </div></center></center>
 </div>
 
 
