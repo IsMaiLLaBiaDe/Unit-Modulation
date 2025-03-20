@@ -204,9 +204,9 @@ if (isset($_SESSION['user_id'])) {
     <center><p class="w3-left"><a>Unit-modulation</a></p></center>
     <p class="w3-right">
 	   	 <a href="../search.php"><i class=" w3-margin-right fa fa-search"></i></a>
-      <a href="cart.php"><i class="fa fa-shopping-cart w3-margin-right"></i></a>
-	  <a href="favored.php"> <i class="fa fa-heart w3-margin-right" ></i></a>
-	  <a href="functions/0.php"><i class="fa fa-sign-out"></i></a>	
+      <a href="../cart.php"><i class="fa fa-shopping-cart w3-margin-right"></i></a>
+	  <a href="../favored.php"> <i class="fa fa-heart w3-margin-right" ></i></a>
+	  <a href="../functions/0.php"><i class="fa fa-sign-out"></i></a>	
 	  	 <!-- <a href="user.php"> <i class="fa fa-user w3-margin-right"></i> <i style="font-size:11px;"> Hello <?= htmlspecialchars($user["fname"]) ?></i></a> -->
     </p>
   </header>
@@ -230,7 +230,7 @@ if (isset($_SESSION['user_id'])) {
   <header class="w3-container w3-xlarge">
     <center><p class="w3-left"><a>Unit-modulation</a></p></center>
     <p class="w3-right">
-	   	 <a href="search.php"><i class=" w3-margin-right fa fa-search"></i></a>
+	   	 <a href="../search.php"><i class=" w3-margin-right fa fa-search"></i></a>
        <a href="cart.php"><i class="fa fa-shopping-cart w3-margin-right"></i></a>
 	   <a href="favored.php"> <i class="fa fa-heart w3-margin-right" ></i></a>
 	   <a href="login.php" ><i class=" fa fa-sign-in"></i></a>
@@ -291,6 +291,23 @@ if ($result->num_rows > 0)
   background-size: cover;
 background-image:url('../assets/slide/ipad.png'); background-color:gray;" class="flex-container">
   <div><center><form  style="height:50%;width:50%;font-size: 50%;color:white;" action="../functions/preq.php" method="post">
+		<?php
+include_once '../functions/database.php';
+
+$sql = "SELECT * FROM products  WHERE id = $id";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {?>   
+   <label for="quantity"><?=$row['product'];?></label>
+   <input type="hidden" name="product" value="<?=$row['product'];?>">
+		<?php
+    }
+} else {
+    echo "<center>0 results</center><br>";
+}
+
+?>
     <label for="quantity">Quantity:</label>
     <input type="number" min="1" id="q" name="q"><br><br>
     <label for="FirstName">First Name:</label>
