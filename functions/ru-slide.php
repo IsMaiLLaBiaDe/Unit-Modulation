@@ -17,13 +17,13 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
-		<?php
-include_once '../functions/database.php';
+		// <?php
+// include_once 'functions/database.php';
 
-$sql = "SELECT * FROM products WHERE product = item;";         
-$result = $conn->query($sql);
+// $sql = "SELECT * FROM products WHERE product = item;";         
+// $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
+// if ($result->num_rows > 0) {
 
-    while ($row = $result->fetch_assoc()) {?>
+    // while ($row = $result->fetch_assoc()) {?>
 	

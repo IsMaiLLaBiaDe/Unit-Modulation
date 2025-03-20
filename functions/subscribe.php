@@ -15,21 +15,17 @@ if ($conn->connect_error) {
 }
 
 // Prepare  and execute the SQL statement
-$sql = "INSERT INTO preq (product,q, fn, ln, email, adresse, np) VALUES (?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT subscribe (email) VALUES (?)";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("sssssss", $p, $q, $fn, $ln, $email, $adresse, $np);
+$stmt->bind_param("s", $e);
 
 // Get form data
-$p = $_POST['product'];
-$q = $_POST['q'];
-$fn = $_POST['fn'];
-$ln = $_POST['ln'];
-$email = $_POST['email'];
-$adresse = $_POST['adresse'];
-$np = $_POST['np'];
+
+$e = $_POST['email'];
 $stmt->execute();
-header("Location: ../req-sub.php");
+
 
 $stmt->close();
 $conn->close();
+header("Location: ../");
 ?>

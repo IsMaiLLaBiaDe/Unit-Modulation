@@ -1,5 +1,5 @@
 <?php
-  $mysqli = require __DIR__ . "./../functions/database.php";
+  $mysqli = require __DIR__ . ".../../functions/database.php";
 $sql = "INSERT INTO page(page)
         VALUES (?)";
 		
@@ -10,7 +10,7 @@ if ( ! $stmt->prepare($sql)) {
 $stmt->bind_param("s",$_POST["page"],);
 if ($stmt->execute()) {
 	
-	$mysqli = require __DIR__ . "./../functions/database.php";
+	$mysqli = require __DIR__ . ".../../functions/database.php";
 	  // Get the filename and content from the POST request
 $directory = '../Page'; // Directory name
 $filename = $_POST["page"].'.php'; // File name

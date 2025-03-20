@@ -2,7 +2,7 @@
 
 if (isset($_SESSION["user_id"])) {
     
-    $mysqli = require __DIR__ . "../functions/database.php";
+    $mysqli = require __DIR__ . "../../functions/database.php";
     
     $sql = "SELECT * FROM users
             WHERE id = {$_SESSION["user_id"]}";
@@ -13,7 +13,7 @@ if (isset($_SESSION["user_id"])) {
 }
 
 
-  $mysqli = require __DIR__ . "./../functions/database.php";
+  $mysqli = require __DIR__ . "../../functions/database.php";
 $sql = "INSERT INTO products(product,quantity,price,description,title,ppthimg,keyword,lproduct)
         VALUES (?,?,?,?,?,?,?,?)";
 		
@@ -26,7 +26,7 @@ if ($stmt->execute()) {
 
 
 
-  $mysqli = require __DIR__ . "./../functions/database.php";
+  $mysqli = require __DIR__ . "../../functions/database.php";
 	  // Get the filename and content from the Posts request
 $directory = '../p/'; // Directory name
 $filename = $_POST["lproduct"].'.php'; // File name
